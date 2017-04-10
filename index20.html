@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<script src="Scripts/angular.js"></script>
+	<script src="Scripts/index20.js"></script>
+	<script src="Scripts/index20StringService.js"></script>
+	<link href="Styles/index20.css" rel="stylesheet" />
+</head>
+<body ng-app="myModule">
+	<h3>20. Creating and using a custom service in AngularJS.</h3>
+	<br /><br />
+	<div ng-controller="myController">
+		<table>
+			<tr>
+				<td>Your String</td>
+				<td><input type="text" ng-model="input" /> </td>
+			</tr>
+			<tr>
+				<td>Result</td>
+				<td><input type="text" ng-model="output" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="button" ng-click="transformString(input)" value="Process String" />
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br />
+
+</body>
+</html>
+
+

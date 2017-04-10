@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<script src="Scripts/angular.js"></script>
+	<script src="Scripts/index16.js"></script>
+	<link href="Styles/index16.css" rel="stylesheet" />
+</head>
+<body ng-app="myModule">
+	<h3>16. ng-include Directive in Angular JS.</h3>
+	<div ng-controller="myController">
+		<br /><br />
+		Select View : 
+		<select ng-model="employeeView">
+			<option value="index16Part01.html">Table</option>
+			<option value="index16Part02.html">List</option>
+		</select>
+		<br /><br />
+		<!--<div ng-include="'index16Part01.html'"></div>-->
+		<div ng-include="employeeView"></div>
+		<br /><br /><br />
+
+
+	</div>
+	<br />
+
+</body>
+</html>
+
+

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<script src="Scripts/angular.js"></script>
+	<script src="Scripts/index14.js"></script>
+	<link href="Styles/index14.css" rel="stylesheet" />
+</head>
+<body>
+	<h3>14. ng-hide and ng-show in AngularJS.</h3>
+	<div ng-controller="myController">
+		<input type="checkbox" ng-model="hideSalary" /> Hide Salary
+		<input type="checkbox" ng-model="maskSalary" /> Mask Salary
+		<br /><br />
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Gender</th>
+					<th>City</th>
+					<th ng-hide="hideSalary">Salary</th>
+					<th ng-show="!hideSalary">Salary</th>
+					<th ng-hide="maskSalary">Salary</th>
+					<th ng-show="maskSalary">Salary</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="employee in employees ">
+					<td> {{ employee.name }} </td>
+					<td> {{ employee.gender }} </td>
+					<td> {{ employee.city }} </td>
+					<td ng-hide="hideSalary"> {{ employee.salary }} </td>
+					<td ng-show="!hideSalary"> {{ employee.salary }} </td>
+					<td ng-hide="maskSalary"> {{ employee.salary }} </td>
+					<td ng-show="maskSalary"> #### </td>
+				</tr>
+			</tbody>
+		</table>
+		<br /><br /><br />
+
+
+
+
+	</div>
+	<br />
+
+</body>
+</html>
+
+

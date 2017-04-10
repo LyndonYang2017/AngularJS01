@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<script src="Scripts/angular.js"></script>
+	<script src="Scripts/index04.js"></script>
+</head>
+<body>
+	<h3>04. AngularJS ng-src directive.</h3>
+	<div ng-controller="myController">
+		<div>Name : {{ country.name }}</div>
+		<div>Capital : {{ country.capital }}</div>
+		<div><img ng-src="{{ country.flag }}" alt="{{ country.name + 'Flag'}}" style="height:100px; width:200px" /> </div>
+		<br />
+	</div>
+	<br />
+
+</body>
+</html>

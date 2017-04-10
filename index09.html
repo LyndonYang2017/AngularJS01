@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<script src="Scripts/angular.js"></script>
+	<script src="Scripts/index09.js"></script>
+	<link href="Styles/index09.css" rel="stylesheet" />
+</head>
+<body>
+	<h3>09. Sorting Data in AngularJS.</h3>
+	<div ng-controller="myController">
+		Order By : <select ng-model="sortColumn">
+						<option value="name">Name ASC</option>
+			 			<option value="gender">Gender ASC</option>
+			 			<option value="dateOfBirth">Date of Birth ASC</option>
+			 			<option value="-salary">Salary DESC</option>
+				   </select>
+		<br /><br />
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Date of Birth</th>
+					<th>Gender</th>
+					<th>Salary</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!--<tr ng-repeat="employee in employees | orderBy : 'name' : true">-->
+				<tr ng-repeat="employee in employees | orderBy:sortColumn">
+					<td>{{ employee.name }}</td>
+					<td>{{ employee.dateOfBirth | date:"dd/MM/yyyy" }}</td>
+					<td>{{ employee.gender }}</td>
+					<td>{{ employee.salary | number:2 }}</td>
+				</tr>
+			</tbody>
+		</table>
+		<br /><br /><br />
+
+
+
+
+	</div>
+	<br />
+
+</body>
+</html>
+

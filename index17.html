@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<script src="Scripts/angular.js"></script>
+	<script src="Scripts/index17.js"></script>
+	<link href="Styles/index17.css" rel="stylesheet" />
+</head>
+<body ng-app="myModule">
+	<h3>17. Consuming ASP.NET Web Service in AngularJS using $http.</h3>
+	<div ng-controller="myController">
+		<br /><br />
+		<table>
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>name</th>
+					<th>gender</th>
+					<th>Salary</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="employee in employees ">
+					<td> {{ employee.id }} </td>
+					<td> {{ employee.name }} </td>
+					<td> {{ employee.gender }} </td>
+					<td> {{ employee.salary }} </td>
+				</tr>
+			</tbody>
+		</table>
+		<br /><br /><br />
+
+	</div>
+	<br />
+
+</body>
+</html>
+
+
